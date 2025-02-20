@@ -1,4 +1,5 @@
 ﻿# Mental Health Chatbot Backend
+ We Created this backend using node.js, express, and mongoDB, and used JWT for authentication. 
 
 ## How to use:
 
@@ -18,4 +19,17 @@ npm install
 node server.js
 ``` 
 
+## Postman documentation:
+
+1. User Register `http://localhost:3000/api/users/register`:
+![image](https://github.com/user-attachments/assets/9f6a2509-0ca3-42c8-9617-abb34afec727)
+
+2. User Login `http://localhost:3000/api/users/login`:
+![image](https://github.com/user-attachments/assets/4166203c-4775-4992-b024-39ac3dc7811d)
+
+3. User Logout `http://localhost:3000/api/users/logout`:
+![image](https://github.com/user-attachments/assets/4800a74b-cf0f-4e35-bf91-467db18e6268)
+
+4. Send message to chatbot `http://localhost:3000/api/chatbot/message/`:
+![image](https://github.com/user-attachments/assets/aff6c9a2-587b-4e88-af06-48f7345aade3)
 
