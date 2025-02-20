@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const userRoutes = require("./routes/UserRoute");
+const chatbotRoutes = require("./routes/ChatbotRoute.js");
 
 dotenv.config();
 
@@ -13,7 +14,8 @@ app.route("/").get((req, res) => {
   res.send("Hello World!");
 });
 
-app.use("/api/users", userRoutes); // Mount the user routes at /api/users
+app.use("/api/users", userRoutes);
+app.use("/api/chatbot", chatbotRoutes);
 
 const PORT = process.env.PORT || 3000;
 const MONGO_URI = process.env.MONGO_URI;
