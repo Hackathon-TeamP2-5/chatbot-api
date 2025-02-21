@@ -1,21 +1,19 @@
-# Use Ubuntu base image
-FROM ubuntu:latest
+# Use an official Node.js image
+FROM node:18
 
-# Install necessary dependencies
-RUN apt-get update && apt-get install -y curl && \
-    curl -fsSL https://ollama.com/install.sh | sh
-
-# Set the working directory
+# Set working directory
 WORKDIR /app
 
-# Copy package.json and install dependencies
-COPY package.json .
+# Copy package.json and package-lock.json
+COPY package.json package-lock.json ./
+
+# Install dependencies
 RUN npm install
 
-# Copy all project files
+# Copy the entire project
 COPY . .
 
-# Expose the port your Node.js app runs on
+# Expose the port (should match the one in your code)
 EXPOSE 3000
 
 # Start the server
