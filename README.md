@@ -1,5 +1,5 @@
 ﻿# Mental Health Chatbot Backend
- We Created this backend using node.js, express, and mongoDB, and used JWT for authentication, and we deployed this Node.js server on Render website at this url [Welcome Prompt](https://chatbot-api-f7er.onrender.com/). 
+ We Created this backend using node.js, express, and mongoDB, and used JWT for authentication. 
 
 ## How to use:
 
