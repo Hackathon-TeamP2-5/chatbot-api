@@ -9,9 +9,8 @@ dotenv.config();
 const app = express();
 app.use(express.json()); // for parsing application/json
 
-// Define routes before starting the server
-app.route("/").get((req, res) => {
-  res.send("Hello World!");
+app.get("/", (req, res) => {
+  res.send("Chatbot API is running 🚀");
 });
 
 app.use("/api/users", userRoutes);
